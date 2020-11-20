@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+  <meta charset="gbk">
+  <title>評價</title>
+  <style>
+    .wrapper{width:600px; height: 300px; margin:10px auto; font:14px/1.5 arial;}
+    /*tab*/
+    #star{overflow:hidden;}
+    #star li {
+      float:left; 
+      width:50px; 
+      height:50px; 
+      margin:15px; 
+      display:inline; 
+      color:#999; 
+      font:bold 18px arial; 
+      cursor:pointer; 
+      filter: grayscale(100%);
+    }
+    #star .hact{filter: grayscale(0%);}
+    #star_word{width:80px; height:30px; line-height:30px; border:1px solid #ccc; margin:10px; text-align:center; display:none}
+  </style>
+<script>
+window.onload = function(){
+
+  var star = document.getElementById("star");
+  var star_li = star.getElementsByTagName("li");
+  var star_word = document.getElementById("star_word");
+  var result = document.getElementById("result");
+  var i=0;
+  var j=0;
+  var len = star_li.length;
+  var word = ['1','2','3',"4","5"]
+  
+  for (i=0; i<len; i++) {
+    star_li[i].index = i;
+    star_li[i].onmouseover = function(){
+      star_word.style.display = "block";
+      star_word.innerHTML = word[this.index];
+      for(i=0; i<=this.index; i++){
+        star_li[i].className = "hact";   
+      }
+    }
+
+    star_li[i].onmouseout = function(){
+      star_word.style.display = "none";
+      for (i=0; i<len; i++){
+        star_li[i].className = "";
+      }
+    }
+    
+    star_li[i].onclick = function(){
+      result.innerHTML = (this.index+1)+"星好評";
+
+      star_word.style.display = "block";
+      
+    }
+  }
+}
+</script>
+</head>
+<body>
+<div class="wrapper">
+恭喜您獲得
+<span id="result"></span>
+
+<ul id="star">
+<li><img src="./imges/heart.png"></li>
+<li><img src="./imges/heart.png"></li>
+<li><img src="./imges/heart.png"></li>
+<li><img src="./imges/heart.png"></li>
+<li><img src="./imges/heart.png"></li>
+</ul>
+<img src="./imges/heart_hand.png">
+<div id="star_word">一般</div>
+
+</div> 
+
+</body> 
+</html>

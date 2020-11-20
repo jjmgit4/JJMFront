@@ -4,6 +4,35 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+
+
+
+
+// 進階篩選
+function openNav() {
+  document.getElementById("mySidenav").style.width = "320px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+ // fixed add shopping cart
+//  $(window).scroll(function() {
+//   if ($(this).scrollTop() > 100) {
+//     $('#fixedshoppingcart').fadeOut('slow');
+      
+//   } else {
+//     $('#fixedshoppingcart').fadeIn('slow');
+//   }
+// });
+// $('#fixedshoppingcart').click(function() {
+//   $('html, body').animate({
+//     scrollTop: 0
+//   }, 1500, 'easeInOutExpo');
+//   return false;
+// });
+
 !(function($) {
   "use strict";
 
@@ -19,6 +48,25 @@
   if ($(window).scrollTop() > 100) {
     $('#header').addClass('header-scrolled');
   }
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+      $('#showlogo1').addClass('header-scrolled');
+    } else {
+      $('#showlogo1').removeClass('header-scrolled');
+    }
+  });
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+      $('#showlogo2').addClass('header-scrolled');
+    } else {
+      $('#showlogo2').removeClass('header-scrolled');
+    }
+  });
+
+
+  
 
   // Smooth scroll for the navigation menu and links with .scrollto classes
   $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function(e) {
@@ -144,7 +192,18 @@
     autoplay: true,
     dots: true,
     loop: true,
-    items: 1
+    // items: 1
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 2
+      },
+      900: {
+        items: 3
+      }
+    }
   });
 
   // Porfolio isotope and filter

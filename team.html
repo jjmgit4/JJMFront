@@ -5,13 +5,12 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Team - Moderna Bootstrap Template</title>
+  <title>Jian Jian Mai 健漸美 | 健身課程平台</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/JJM-icon.png" rel="icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
@@ -27,6 +26,9 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <!--Search CSS-->
+  <link href="search/mainwhite.css" rel="stylesheet" />
+  <link href="slider/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Moderna - v2.1.0
@@ -39,41 +41,91 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top ">
+  <header id="header" class="fixed-top">
     <div class="container">
 
       <div class="logo float-left">
-        <h1 class="text-light"><a href="index.html"><span>Moderna</span></a></h1>
+        <a href="index.html"><img src="assets/img/navbar-logo-w.png" alt="" class="img-fluid" id="showlogo2"></a>
+        <!-- <h1 class="text-light"><a href="index.html"><span>Moderna</span></a></h1> -->
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
-      <nav class="nav-menu float-right d-none d-lg-block">
+      <nav class="nav-menu float-right d-none d-lg-block myfont1">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li class="active"><a href="team.html">Team</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li class="drop-down"><a href="">Drop Down</a>
+          <!-- <li class="active"><a href="index.html">Home</a></li> -->
+          <li>
+            <!--白框搜尋列-->
+            <div class="ws130 page-scroll" id="showsearch">
+              <form>
+                <div class="inner-form">
+                  <div class="input-field first-wrap">
+                    <div class="svg-wrapper"><!--刪除svg圖-->
+                    </div>
+                    <input id="search" type="text" placeholder="尋找課程" />
+                  </div>
+                  <div class="input-field second-wrap">
+                    <button class="btn-search" type="button"><i class="fa fa-search"></i></button>
+                  </div>
+                </div>
+                <!-- <span class="info">進階搜尋</span>  -->
+              </form>
+            </div>
+            <!--End 白框搜尋列-->
+          </li>
+          <li class="drop-down mr-2"><a href="">課程類別</a>
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="drop-down"><a href="#">Drop Down 2</a>
+              <li><a href="lessonall.html">TRX</a></li>
+              <li class="drop-down"><a href="lessonall.html">瑜珈</a>
                 <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
+                  <li><a href="lessonall.html">哈達瑜珈</a></li>
+                  <li><a href="lessonall.html">熱瑜珈</a></li>
+                  <li><a href="lessonall.html">陰瑜珈</a></li>
+                  <li><a href="lessonall.html">空中瑜珈</a></li>
+                  <li><a href="lessonall.html">艾揚格瑜珈</a></li>
+                  <li><a href="lessonall.html">阿斯湯伽瑜珈</a></li>
+                  <li><a href="lessonall.html">流瑜珈</a></li>
                 </ul>
               </li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
+              <li><a href="lessonall.html">重訓</a></li>
+              <li><a href="lessonall.html">有氧</a></li>
+              <li><a href="lessonall.html">飛輪</a></li>
+              <li><a href="lessonall.html">拳擊</a></li>
             </ul>
           </li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <!-- <li>
+            <form class="form-inline" action="/action_page.php">
+              <div class="input-group">
+                  <input class="form-control" type="text" placeholder="尋找課程">
+                  <button class="btn btn-dark mr-4" style="background-color: #F39800; border:  #F39800;" type="submit">搜尋</button>
+              </div>
+            </form>
+          </li> -->
+          <li><a href="about.html">成為教練</a></li>
+          <li><a href="services.html">常見問題</a></li>
+          <!-- <li><a href="#">揪團室</a></li> -->
+          <li class="drop-down">
+            <a href="">
+            個人檔案
+            <!--大頭貼-->
+            <!-- <img src="assets/img/user.png" id="showhead" class="hideuserimg"> -->
+            </a>
+            <ul>
+              <li><a href="member.html">個人資料</a></li>
+              <li class="drop-down"><a href="mylesson.html">個人課程</a>
+                <ul>
+                  <li><a href="#">正在上的課程</a></li>
+                  <li><a href="#">即將開始的課程</a></li>
+                  <li><a href="#">已結束的課程</a></li>
+                </ul>
+              </li>
+              <li><a href="#">訊息通知</a></li>
+              <li><a href="#">查詢訂單</a></li>
+              <li><a href="#">健美點數</a></li>
+              
+            </ul>
+          </li>
+          <li><a href="shop.html"><i class="fa fa-shopping-cart fa-2x"></i></a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
@@ -227,7 +279,7 @@
   <!-- ======= Footer ======= -->
   <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
 
-    <div class="footer-newsletter">
+    <!-- <div class="footer-newsletter">
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
@@ -241,47 +293,43 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="footer-top">
       <div class="container">
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+            <h4>會員服務</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">個人資料</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">購物車</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">成為教練</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">會員服務條款</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">隱私權政策</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
+            <h4>客服中心</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">常見問題</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">購買說明</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="contact.html">聯絡我們</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>Contact Us</h4>
+            <h4>關於我們</h4>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              <strong>健漸美&nbsp; Jian Jian Mai</strong><br>
+              客服電話: (07)969-1234<br>
+              聯絡信箱: JJM@test.com<br>
             </p>
-
           </div>
+          
 
-          <div class="col-lg-3 col-md-6 footer-info">
+          <!-- <div class="col-lg-3 col-md-6 footer-info">
             <h3>About Moderna</h3>
             <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
             <div class="social-links mt-3">
@@ -290,7 +338,7 @@
               <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
               <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
             </div>
-          </div>
+          </div> -->
 
         </div>
       </div>
@@ -298,14 +346,14 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>Moderna</span></strong>. All Rights Reserved
+        Copyright &copy; <strong><span>Jian Jian Mai</span></strong> 2020. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
       </div>
     </div>
   </footer><!-- End Footer -->
